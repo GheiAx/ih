@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory</title>
+<style>
+body {
+    background-color: #fee7b3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    background-color: #00b7af;
+    border: 3px #e9630a solid;
+    margin: 10px;
+    display: inline-block;
+    transition: transform 0.2s;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+</style>
+</head>
+<body>
+<audio id="audio-base" src="./audio/base.mp3" loop></audio>
+<audio id="audio-card" src="./audio/carte.mp3"></audio>
+<audio id="audio-correct" src="./audio/giusto.mp3"></audio>
+<audio id="audio-wrong" src="./audio/sbagliato.mp3"></audio>
+<div class="header">
+    <h1>MEMORY</h1>
+    <h2>Scegli se giocare con bandiere o simboli</h2>
+</div>
+<div class="card-container">
+    <div class="card" id="flagCard">
+        <h2>Bandiere</h2>
+    </div>
+    <div class="card" id="symbolCard">
+        <h2>Simboli</h2>
+    </div>
+</div>
+<script>
+document.getElementById('flagCard').addEventListener('click', function() {
+    window.location.href = './gamewflags.html'; 
+});
+
+document.getElementById('symbolCard').addEventListener('click', function() {
+    window.location.href = './game.html'; 
+});
+</script>
+</body>
+</html>
